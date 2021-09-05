@@ -4,6 +4,8 @@ import './registerServiceWorker'
 import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
+import lodashGet from 'lodash/get'
+Vue.prototype.$get = lodashGet
 
 new Vue({
   vuetify,
