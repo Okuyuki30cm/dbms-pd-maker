@@ -100,3 +100,6 @@ https://support.google.com/chrome/answer/9658361
 |  開発者  |  連絡先 / Twitter  |  コメント  |
 | :----: | :----: | :---- |
 |  鉱山夫組合牧場  |  @db_mpros  |  jsとhtmlをイチから始めて１週間でアプリってできるんだと思いました。  |
+
+## <img src="assets/uma.png" width=20px> おまけ
+本repoにある全血統データはご自由にご活用ください。
