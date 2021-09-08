@@ -2,25 +2,25 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="teal lighten-2"
       dark
     >
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
+          alt="Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="./assets/icon_512x512.png"
           transition="scale-transition"
           width="40"
         />
 
         <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
+          alt="title logo"
+          class="shrink mt-1 ml-n4 hidden-sm-and-down"
           contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          min-width="350"
+          src="./assets/title.png"
           width="100"
         />
       </div>
@@ -28,30 +28,30 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        href="https://github.com/Okuyuki30cm/dbms-pd-maker/tree/Release-notes"
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
+        <span class="mr-2">簡易Readme</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <PdMakerMain/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import PdMakerMain from './components/PdMakerMain';
 
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    PdMakerMain,
   },
 
   data: () => ({
