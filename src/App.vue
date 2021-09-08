@@ -17,22 +17,30 @@
 
         <v-img
           alt="title logo"
-          class="shrink mt-1 ml-n4 hidden-sm-and-down"
+          class="shrink mt-1 ml-n4 hidden-xs-only"
           contain
           min-width="350"
           src="./assets/title.png"
           width="100"
         />
-      </div>
 
+        <v-img
+          alt="title logo"
+          class="shrink mt-1 ml-0 hidden-sm-and-up"
+          contain
+          min-width="175"
+          src="./assets/title_2.png"
+          width="100"
+        />
+      </div>
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/Okuyuki30cm/dbms-pd-maker/tree/Release-notes"
+        href="https://github.com/Okuyuki30cm/dbms-pd-maker/tree/Readme"
         target="_blank"
         text
       >
-        <span class="mr-2">簡易Readme</span>
+        <span class="mr-2">Readme</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>

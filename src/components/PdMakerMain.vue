@@ -617,7 +617,7 @@
         </v-col>
       </v-row>
     </v-layout>
-    <v-spacer class="my-5 px-0 mx-0 my-0" />
+    <v-spacer class="my-0 px-0 mx-0 py-0" />
     <v-layout justify-center>
       <v-row class="mx-5">
         <v-col cols="12"> 
