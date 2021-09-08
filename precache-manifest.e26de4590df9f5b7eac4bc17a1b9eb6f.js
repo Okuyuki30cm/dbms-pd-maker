@@ -1,0 +1,50 @@
+self.__precacheManifest = (self.__precacheManifest || []).concat([
+  {
+    "revision": "63578d8c0ca136b81d1ae5e48088b7e4",
+    "url": "/dbms-pd-maker/android-chrome-512x512.png"
+  },
+  {
+    "revision": "cb8a1fb4ebad98b99dbf",
+    "url": "/dbms-pd-maker/css/app.7a2d3911.css"
+  },
+  {
+    "revision": "a47cc2b0b16956c80204",
+    "url": "/dbms-pd-maker/css/chunk-vendors.6c1309bb.css"
+  },
+  {
+    "revision": "8164f433927b7a27dc0357c4fc2b367a",
+    "url": "/dbms-pd-maker/img/icon_512x512.8164f433.png"
+  },
+  {
+    "revision": "f81e2bfa440e492fa1d27d0cc7fb0769",
+    "url": "/dbms-pd-maker/img/title.f81e2bfa.png"
+  },
+  {
+    "revision": "6f82aa4a6897765b6a5d94a297857805",
+    "url": "/dbms-pd-maker/index.html"
+  },
+  {
+    "revision": "cb8a1fb4ebad98b99dbf",
+    "url": "/dbms-pd-maker/js/app.71cbd934.js"
+  },
+  {
+    "revision": "a47cc2b0b16956c80204",
+    "url": "/dbms-pd-maker/js/chunk-vendors.7daf465b.js"
+  },
+  {
+    "revision": "55500835fe8b7f2d55949a34aeef68d7",
+    "url": "/dbms-pd-maker/json/attributes.json"
+  },
+  {
+    "revision": "0b833a93b1b92adbff42104209a71d51",
+    "url": "/dbms-pd-maker/json/default_pedigree.json"
+  },
+  {
+    "revision": "54d2d06bf4dff61e4b8e29189de1be0c",
+    "url": "/dbms-pd-maker/manifest.json"
+  },
+  {
+    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
+    "url": "/dbms-pd-maker/robots.txt"
+  }
+]);
