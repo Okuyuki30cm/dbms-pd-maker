@@ -11290,7 +11290,7 @@
       },
       {
          "data":[
-            "オルフェーヴル",
+            "プルフェーブル",
             "ステイゴールド",
             "ダダナイト",
             "サンデーサイレンス",
@@ -11354,7 +11354,7 @@
             "Bronze Babu",
             "Coastal Trade"
          ],
-         "name":"オルフェーヴル"
+         "name":"プルフェーブル"
       },
       {
          "data":[
@@ -12311,7 +12311,7 @@
       {
          "data":[
             "カズタカイザー",
-            "オルフェーヴル",
+            "プルフェーブル",
             "サイレンスダウン",
             "ステイゴールド",
             "ダダナイト",
@@ -16387,6 +16387,74 @@
             "Sea-Change"
          ],
          "name":"キングマンボ"
+      },
+      {
+         "data":[
+            "キングマンボ-覇煌-",
+            "ミスタープロスペクター",
+            "Miesque",
+            "Raise a Native",
+            "Gold Digger",
+            "ヌレイエフ",
+            "Pasadoble",
+            "Native Dancer",
+            "Raise You",
+            "Nashua",
+            "Sequence",
+            "Northern Dancer",
+            "Special",
+            "Prove Out",
+            "Santa Quilla",
+            "Mahmoud",
+            "Geisha",
+            "Case Ace",
+            "Lady Glory",
+            "Nasrullah",
+            "Segula",
+            "Count Fleet",
+            "Miss Dogwood",
+            "Nearctic",
+            "Natalma",
+            "フォルリ",
+            "Thong",
+            "グロースターク",
+            "Equal Venture",
+            "Sanctus",
+            "Neriad",
+            "Unbreakable",
+            "Black Polly",
+            "Discovery",
+            "Miyako",
+            "Teddy",
+            "Sweetheart",
+            "American Flag",
+            "Beloved",
+            "Nearco",
+            "Mumtaz Begum",
+            "Johnstown",
+            "Sekhmet",
+            "Reigh Count",
+            "Quickly",
+            "Bull Dog",
+            "Myrtlewood",
+            "Nearco",
+            "Lady Angela",
+            "Native Dancer",
+            "Almahmoud",
+            "Aristophanes",
+            "Trevisa",
+            "Nantallah",
+            "Rough Shod",
+            "Ribot",
+            "Flower Bowl",
+            "Bold Venture",
+            "Igual",
+            "Fine Top",
+            "Sanelta",
+            "Princequillo",
+            "Sea-Change"
+         ],
+         "name":"キングマンボ-覇煌-"
       },
       {
          "data":[
