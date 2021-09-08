@@ -99,4 +99,4 @@ https://support.google.com/chrome/answer/9658361
 ## <img src="assets/uma.png" width=20px> 問い合わせ先
 |  開発者  |  連絡先 / Twitter  |  コメント  |
 | :----: | :----: | :---- |
-|  鉱山夫組合牧場  |  @db_mpros  |  普段はPython / C++お兄さんしてます。<br>jsとhtmlを始めて1週間でlaunchしました。  |
+|  鉱山夫組合牧場  |  @db_mpros  |  jsとhtmlをイチから始めて１週間でアプリってできるんだと思いました。  |
