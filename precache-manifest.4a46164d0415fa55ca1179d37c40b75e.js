@@ -40,7 +40,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dbms-pd-maker/json/attributes.json"
   },
   {
-    "revision": "35e8d734b9d3320dd11b9916267557d4",
+    "revision": "198de9b0121693d99f9b6d78869c5285",
     "url": "/dbms-pd-maker/json/default_pedigree.json"
   },
   {
