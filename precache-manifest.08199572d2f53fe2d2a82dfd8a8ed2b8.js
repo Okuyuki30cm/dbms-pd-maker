@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dbms-pd-maker/android-chrome-512x512.png"
   },
   {
-    "revision": "ca2f4f66a8fc87149b45",
-    "url": "/dbms-pd-maker/css/app.864a74da.css"
+    "revision": "e1d06ec2a9cd35449d71",
+    "url": "/dbms-pd-maker/css/app.e942d586.css"
   },
   {
     "revision": "a47cc2b0b16956c80204",
@@ -24,12 +24,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dbms-pd-maker/img/title_2.924d7e40.png"
   },
   {
-    "revision": "69c02763f1e311f13a9837f4807e253c",
+    "revision": "8b62cf4ad5cc527495335721e5d1b0c2",
     "url": "/dbms-pd-maker/index.html"
   },
   {
-    "revision": "ca2f4f66a8fc87149b45",
-    "url": "/dbms-pd-maker/js/app.b68c29e8.js"
+    "revision": "e1d06ec2a9cd35449d71",
+    "url": "/dbms-pd-maker/js/app.1635fa26.js"
   },
   {
     "revision": "a47cc2b0b16956c80204",
