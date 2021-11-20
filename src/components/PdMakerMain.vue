@@ -1,3 +1,8 @@
+<!--
+　Author：鉱山夫組合牧場
+　Mail：flashshuttle80430@gmail.com
+　(c) 2021 鉱山夫組合牧場
+-->
 <template>
   <v-container>
     <v-layout >
@@ -25,46 +30,139 @@
                 </v-row>
               </v-spacer>
               <v-spacer class="my-0"/>
-              <v-row>
-                <v-col cols="6" sm="6" md="6" lg="6" xl="6">
-                  <v-card elevation="0"> 
-                    <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
-                      <tbody>
-                        <tr>
-                          <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="2">面白血統</td>
-                        </tr>
-                        <tr>
-                          <td id="sire_group_1" class="UndefinedGr" width="20%">{{Sire_grp_attrib[0]}}</td>
-                          <td id="sire_group_5" class="UndefinedGr" width="20%">{{Sire_grp_attrib[2]}}</td>
-                        </tr>
-                        <tr>
-                          <td id="sire_group_9" class="UndefinedGr" width="20%">{{Sire_grp_attrib[1]}}</td>
-                          <td id="sire_group_13" class="UndefinedGr" width="20%">{{Sire_grp_attrib[3]}}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </v-card>
-                </v-col>
-                <v-col cols="6" sm="6" md="6" lg="6" xl="6">
-                  <v-card elevation="0"> 
-                    <table style="table-layout: fixed; width: 100%; border-collapse:collapse;">
-                      <tbody>
-                        <tr>
-                          <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="2">見事血統</td>
-                        </tr>
-                        <tr>
-                          <td id="sire_group_17" class="UndefinedGr" width="20%">{{Sire_grp_attrib[4]}}</td>
-                          <td id="sire_group_25" class="UndefinedGr" width="20%">{{Sire_grp_attrib[6]}}</td>
-                        </tr>
-                        <tr>
-                          <td id="sire_group_21" class="UndefinedGr" width="20%">{{Sire_grp_attrib[5]}}</td>
-                          <td id="sire_group_29" class="UndefinedGr" width="20%">{{Sire_grp_attrib[7]}}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </v-card>
-                </v-col>
-              </v-row>
+              
+              <div>
+                <v-row v-if="$vuetify.breakpoint.xs">
+                  <v-col cols="12">
+                    <v-card elevation="0"> 
+                      <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
+                        <tbody>
+                          <tr>
+                            <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="5">理論血統</td>
+                          </tr>
+                          <tr>
+                            <td style="border-left:hidden; border-bottom:hidden; border-top:hidden; text-align:center; font-weight:bold">面白</td>
+                            <td id="sire_group_1" class="UndefinedGr" width="20%">{{Sire_grp_attrib[0]}}</td>
+                            <td id="sire_group_9" class="UndefinedGr" width="20%">{{Sire_grp_attrib[1]}}</td>
+                            <td id="sire_group_5" class="UndefinedGr" width="20%">{{Sire_grp_attrib[2]}}</td>
+                            <td id="sire_group_13" class="UndefinedGr" width="20%">{{Sire_grp_attrib[3]}}</td>
+                          </tr>
+                          <tr>
+                            <td style="border-left:hidden; border-bottom:hidden; border-top:hidden; text-align:center; font-weight:bold">見事</td>
+                            <td id="sire_group_17" class="UndefinedGr" width="20%">{{Sire_grp_attrib[4]}}</td>
+                            <td id="sire_group_21" class="UndefinedGr" width="20%">{{Sire_grp_attrib[5]}}</td>
+                            <td id="sire_group_25" class="UndefinedGr" width="20%">{{Sire_grp_attrib[6]}}</td>
+                            <td id="sire_group_29" class="UndefinedGr" width="20%">{{Sire_grp_attrib[7]}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </v-card>
+                  </v-col>
+                  <v-col cols="12">
+                    <v-card elevation="0"> 
+                      <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
+                        <tbody>
+                          <tr>
+                            <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="5">ニトロ *自身の因子含む</td>
+                          </tr>
+                          <tr>
+                            <td id="" class="tankyori" style="font-size:13px;" width="20%">短</td>
+                            <td id="" class="sokuryoku" style="font-size:13px;" width="20%">速</td>
+                            <td id="" class="sokodikara" style="font-size:13px;" width="20%">底</td>
+                            <td id="" class="chokyori" style="font-size:13px;" width="20%">長</td>
+                            <td id="" class="dart" style="font-size:13px;" width="20%">ダ</td>
+                          </tr>
+                          <tr>
+                            <td  style="font-size: 13px; text-align:center; padding: 0px;padding-left: 0px;">{{Sire_nitro[0]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[1]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[2]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[3]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[4]}}</td>
+
+                          </tr>
+                          <tr>
+                            <td id="" class="jobu" style="font-size:13px;" width="20%">丈</td>
+                            <td id="" class="sojuku" style="font-size:13px;" width="20%">早</td>
+                            <td id="" class="bansei" style="font-size:13px;" width="20%">晩</td>
+                            <td id="" class="kenjitu" style="font-size:13px;" width="20%">堅</td>
+                            <td id="" class="kishonan" style="font-size:13px;" width="20%">難</td>
+                          </tr>
+                          <tr>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[5]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[6]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[7]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[8]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[9]}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </v-card>                  
+                  </v-col>
+                </v-row>
+                <v-row v-else>
+                  <v-col cols="5">
+                    <v-card elevation="0"> 
+                      <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
+                        <tbody>
+                          <tr>
+                            <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="5">理論血統</td>
+                          </tr>
+                          <tr>
+                            <td style="border-left:hidden; border-bottom:hidden; border-top:hidden; text-align:center; font-weight:bold">面白</td>
+                            <td id="sire_group_1" class="UndefinedGr" width="20%">{{Sire_grp_attrib[0]}}</td>
+                            <td id="sire_group_9" class="UndefinedGr" width="20%">{{Sire_grp_attrib[1]}}</td>
+                            <td id="sire_group_5" class="UndefinedGr" width="20%">{{Sire_grp_attrib[2]}}</td>
+                            <td id="sire_group_13" class="UndefinedGr" width="20%">{{Sire_grp_attrib[3]}}</td>
+                          </tr>
+                          <tr>
+                            <td style="border-left:hidden; border-bottom:hidden; border-top:hidden; text-align:center; font-weight:bold">見事</td>
+                            <td id="sire_group_17" class="UndefinedGr" width="20%">{{Sire_grp_attrib[4]}}</td>
+                            <td id="sire_group_21" class="UndefinedGr" width="20%">{{Sire_grp_attrib[5]}}</td>
+                            <td id="sire_group_25" class="UndefinedGr" width="20%">{{Sire_grp_attrib[6]}}</td>
+                            <td id="sire_group_29" class="UndefinedGr" width="20%">{{Sire_grp_attrib[7]}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </v-card>
+                  </v-col>
+                  <v-col cols="7">
+                    <v-card elevation="0"> 
+                      <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
+                        <tbody>
+                          <tr>
+                            <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="10">ニトロ *自身の因子含む</td>
+                          </tr>
+                          <tr>
+                            <td id="" class="tankyori" style="font-size:13px;" width="10%">短</td>
+                            <td id="" class="sokuryoku" style="font-size:13px;" width="10%">速</td>
+                            <td id="" class="sokodikara" style="font-size:13px;" width="10%">底</td>
+                            <td id="" class="chokyori" style="font-size:13px;" width="10%">長</td>
+                            <td id="" class="dart" style="font-size:13px;" width="10%">ダ</td>
+                            <td id="" class="jobu" style="font-size:13px;" width="10%">丈</td>
+                            <td id="" class="sojuku" style="font-size:13px;" width="10%">早</td>
+                            <td id="" class="bansei" style="font-size:13px;" width="10%">晩</td>
+                            <td id="" class="kenjitu" style="font-size:13px;" width="10%">堅</td>
+                            <td id="" class="kishonan" style="font-size:13px;" width="10%">難</td>
+                          </tr>
+                          <tr>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[0]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[1]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[2]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[3]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[4]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[5]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[6]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[7]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[8]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Sire_nitro[9]}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </v-card>                  
+                  </v-col>
+                </v-row>
+              </div>
+
               <v-checkbox  v-model="sire_pedigree_active" label="血統を表示" />   
               <v-expand-transition>
                 <v-card v-show="sire_pedigree_active" elevation=0>
@@ -76,24 +174,28 @@
                         <td id="sire-name-1" colspan="4">{{Sire_data.data[1]}}</td>
                         <td id="sire-attrib-1-1" width="10%">{{def_attrib[Sire_pdg_attrib[1][0]]}}</td>
                         <td id="sire-attrib-1-2" width="10%">{{def_attrib[Sire_pdg_attrib[1][1]]}}</td>
+                        <td id="sire-attrib-1-3" width="10%">{{def_attrib[Sire_pdg_attrib[1][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="colt" rowspan="4" width="5%">父</td>
                         <td id="sire-name-3" colspan="3">{{Sire_data.data[3]}}</td>
                         <td id="sire-attrib-3-1">{{def_attrib[Sire_pdg_attrib[3][0]]}}</td>
                         <td id="sire-attrib-3-2">{{def_attrib[Sire_pdg_attrib[3][1]]}}</td>
+                        <td id="sire-attrib-3-3">{{def_attrib[Sire_pdg_attrib[3][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="colt" rowspan="2" width="5%">父</td>
                         <td id="sire-name-7" colspan="2">{{Sire_data.data[7]}}</td>
                         <td id="sire-attrib-7-1">{{def_attrib[Sire_pdg_attrib[7][0]]}}</td>
                         <td id="sire-attrib-7-2">{{def_attrib[Sire_pdg_attrib[7][1]]}}</td>
+                        <td id="sire-attrib-7-3">{{def_attrib[Sire_pdg_attrib[7][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="colt" style="width:5%">父</td>
                         <td id="sire-name-15" >{{Sire_data.data[15]}}</td>
                         <td id="sire-attrib-15-1">{{def_attrib[Sire_pdg_attrib[15][0]]}}</td>
                         <td id="sire-attrib-15-2">{{def_attrib[Sire_pdg_attrib[15][1]]}}</td>
+                        <td id="sire-attrib-15-3">{{def_attrib[Sire_pdg_attrib[15][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="filly">母</td>
@@ -101,6 +203,7 @@
                         <td id="sire-name-17" >{{Sire_data.data[17]}}</td>
                         <td id="sire-attrib-17-1">{{def_attrib[Sire_pdg_attrib[17][0]]}}</td>
                         <td id="sire-attrib-17-2">{{def_attrib[Sire_pdg_attrib[17][1]]}}</td>
+                        <td id="sire-attrib-17-3">{{def_attrib[Sire_pdg_attrib[17][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="filly" rowspan="3">母</td>
@@ -108,12 +211,14 @@
                         <td id="sire-name-9" colspan="2">{{Sire_data.data[9]}}</td>
                         <td id="sire-attrib-9-1">{{def_attrib[Sire_pdg_attrib[9][0]]}}</td>
                         <td id="sire-attrib-9-2">{{def_attrib[Sire_pdg_attrib[9][1]]}}</td>
+                        <td id="sire-attrib-9-3">{{def_attrib[Sire_pdg_attrib[9][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="colt" >父</td>
                         <td id="sire-name-19" >{{Sire_data.data[19]}}</td>
                         <td id="sire-attrib-19-1">{{def_attrib[Sire_pdg_attrib[19][0]]}}</td>
                         <td id="sire-attrib-19-2">{{def_attrib[Sire_pdg_attrib[19][1]]}}</td>
+                        <td id="sire-attrib-19-3">{{def_attrib[Sire_pdg_attrib[19][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="filly">母</td>
@@ -121,6 +226,7 @@
                         <td id="sire-name-21" >{{Sire_data.data[21]}}</td>
                         <td id="sire-attrib-21-1">{{def_attrib[Sire_pdg_attrib[21][0]]}}</td>
                         <td id="sire-attrib-21-2">{{def_attrib[Sire_pdg_attrib[21][1]]}}</td>
+                        <td id="sire-attrib-21-3">{{def_attrib[Sire_pdg_attrib[21][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="filly" rowspan="7">母</td>
@@ -128,18 +234,21 @@
                         <td id="sire-name-5" colspan="3">{{Sire_data.data[5]}}</td>
                         <td id="sire-attrib-5-1">{{def_attrib[Sire_pdg_attrib[5][0]]}}</td>
                         <td id="sire-attrib-5-2">{{def_attrib[Sire_pdg_attrib[5][1]]}}</td>
+                        <td id="sire-attrib-5-3">{{def_attrib[Sire_pdg_attrib[5][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="colt" rowspan="2">父</td>
                         <td id="sire-name-11" colspan="2">{{Sire_data.data[11]}}</td>
                         <td id="sire-attrib-11-1">{{def_attrib[Sire_pdg_attrib[11][0]]}}</td>
                         <td id="sire-attrib-11-2">{{def_attrib[Sire_pdg_attrib[11][1]]}}</td>
+                        <td id="sire-attrib-11-3">{{def_attrib[Sire_pdg_attrib[11][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="colt" >父</td>
                         <td id="sire-name-23" >{{Sire_data.data[23]}}</td>
                         <td id="sire-attrib-23-1">{{def_attrib[Sire_pdg_attrib[23][0]]}}</td>
                         <td id="sire-attrib-23-2">{{def_attrib[Sire_pdg_attrib[23][1]]}}</td>
+                        <td id="sire-attrib-23-3">{{def_attrib[Sire_pdg_attrib[23][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="filly">母</td>
@@ -147,6 +256,7 @@
                         <td id="sire-name-25" >{{Sire_data.data[25]}}</td>
                         <td id="sire-attrib-25-1">{{def_attrib[Sire_pdg_attrib[25][0]]}}</td>
                         <td id="sire-attrib-25-2">{{def_attrib[Sire_pdg_attrib[25][1]]}}</td>
+                        <td id="sire-attrib-25-3">{{def_attrib[Sire_pdg_attrib[25][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="filly" rowspan="3">母</td>
@@ -154,12 +264,14 @@
                         <td id="sire-name-13" colspan="2">{{Sire_data.data[13]}}</td>
                         <td id="sire-attrib-13-1">{{def_attrib[Sire_pdg_attrib[13][0]]}}</td>
                         <td id="sire-attrib-13-2">{{def_attrib[Sire_pdg_attrib[13][1]]}}</td>
+                        <td id="sire-attrib-13-3">{{def_attrib[Sire_pdg_attrib[13][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="colt">父</td>
                         <td id="sire-name-27" >{{Sire_data.data[27]}}</td>
                         <td id="sire-attrib-27-1">{{def_attrib[Sire_pdg_attrib[27][0]]}}</td>
                         <td id="sire-attrib-27-2">{{def_attrib[Sire_pdg_attrib[27][1]]}}</td>
+                        <td id="sire-attrib-27-3">{{def_attrib[Sire_pdg_attrib[27][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="filly">母</td>
@@ -167,6 +279,7 @@
                         <td id="sire-name-29" >{{Sire_data.data[29]}}</td>
                         <td id="sire-attrib-29-1">{{def_attrib[Sire_pdg_attrib[29][0]]}}</td>
                         <td id="sire-attrib-29-2">{{def_attrib[Sire_pdg_attrib[29][1]]}}</td>
+                        <td id="sire-attrib-29-3">{{def_attrib[Sire_pdg_attrib[29][2]]}}</td>
                       </tr>                
                     </tbody>
                   </table>
@@ -185,60 +298,152 @@
                 <v-row dense>
                   <v-col cols="12" class="pb-2">        
                     <v-autocomplete
+                      v-on:change="dam_selected"
                       :items="myDam"
                       item-text="name"
                       v-model="Dam_data"
                       hint="自家製は名前の頭に ★ を付けています"
                       persistent-hint
                       return-object
-                      v-on:change="dam_selected"
-
                     >
                   </v-autocomplete>
                   </v-col>  
                 </v-row>
               </v-spacer>
               <v-spacer class="my-0"/>
-              <v-row>
-                <v-col cols="6" sm="6" md="6" lg="6" xl="6">
-                  <v-card elevation="0"> 
-                    <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
-                      <tbody>
-                        <tr>
-                          <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="2">面白血統</td>
-                        </tr>
-                        <tr>
-                          <td id="dam_group_1" class="UndefinedGr" width="20%">{{Dam_grp_attrib[0]}}</td>
-                          <td id="dam_group_5" class="UndefinedGr" width="20%">{{Dam_grp_attrib[2]}}</td>
-                        </tr>
-                        <tr>
-                          <td id="dam_group_9" class="UndefinedGr" width="20%">{{Dam_grp_attrib[1]}}</td>
-                          <td id="dam_group_13" class="UndefinedGr" width="20%">{{Dam_grp_attrib[3]}}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </v-card>
-                </v-col>
-                <v-col cols="6" sm="6" md="6" lg="6" xl="6">
-                  <v-card elevation="0"> 
-                    <table style="table-layout: fixed; width: 100%; border-collapse:collapse;">
-                      <tbody>
-                        <tr>
-                          <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="2">見事血統</td>
-                        </tr>
-                        <tr>
-                          <td id="dam_group_17" class="UndefinedGr" width="20%">{{Dam_grp_attrib[4]}}</td>
-                          <td id="dam_group_25" class="UndefinedGr" width="20%">{{Dam_grp_attrib[6]}}</td>
-                        </tr>
-                        <tr>
-                          <td id="dam_group_21" class="UndefinedGr" width="20%">{{Dam_grp_attrib[5]}}</td>
-                          <td id="dam_group_29" class="UndefinedGr" width="20%">{{Dam_grp_attrib[7]}}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </v-card>
-                </v-col>
-              </v-row>
+              
+              <div>
+                <v-row v-if="$vuetify.breakpoint.xs">
+                  <v-col cols="12">
+                    <v-card elevation="0"> 
+                      <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
+                        <tbody>
+                          <tr>
+                            <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="5">理論血統</td>
+                          </tr>
+                          <tr>
+                            <td style="border-left:hidden; border-bottom:hidden; border-top:hidden; text-align:center; font-weight:bold">面白</td>
+                            <td id="dam_group_1" class="UndefinedGr" width="20%">{{Dam_grp_attrib[0]}}</td>
+                            <td id="dam_group_9" class="UndefinedGr" width="20%">{{Dam_grp_attrib[1]}}</td>
+                            <td id="dam_group_5" class="UndefinedGr" width="20%">{{Dam_grp_attrib[2]}}</td>
+                            <td id="dam_group_13" class="UndefinedGr" width="20%">{{Dam_grp_attrib[3]}}</td>
+                          </tr>
+                          <tr>
+                            <td style="border-left:hidden; border-bottom:hidden; border-top:hidden; text-align:center; font-weight:bold">見事</td>
+                            <td id="dam_group_17" class="UndefinedGr" width="20%">{{Dam_grp_attrib[4]}}</td>
+                            <td id="dam_group_21" class="UndefinedGr" width="20%">{{Dam_grp_attrib[5]}}</td>
+                            <td id="dam_group_25" class="UndefinedGr" width="20%">{{Dam_grp_attrib[6]}}</td>
+                            <td id="dam_group_29" class="UndefinedGr" width="20%">{{Dam_grp_attrib[7]}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </v-card>
+                  </v-col>
+                  <v-col cols="12">
+                    <v-card elevation="0"> 
+                      <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
+                        <tbody>
+                          <tr>
+                            <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="5">ニトロ</td>
+                          </tr>
+                          <tr>
+                            <td id="" class="tankyori" style="font-size:13px;" width="20%">短</td>
+                            <td id="" class="sokuryoku" style="font-size:13px;" width="20%">速</td>
+                            <td id="" class="sokodikara" style="font-size:13px;" width="20%">底</td>
+                            <td id="" class="chokyori" style="font-size:13px;" width="20%">長</td>
+                            <td id="" class="dart" style="font-size:13px;" width="20%">ダ</td>
+                          </tr>
+                          <tr>
+                            <td  style="font-size: 13px; text-align:center; padding: 0px;padding-left: 0px;">{{Dam_nitro[0]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[1]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[2]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[3]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[4]}}</td>
+
+                          </tr>
+                          <tr>
+                            <td id="" class="jobu" style="font-size:13px;" width="20%">丈</td>
+                            <td id="" class="sojuku" style="font-size:13px;" width="20%">早</td>
+                            <td id="" class="bansei" style="font-size:13px;" width="20%">晩</td>
+                            <td id="" class="kenjitu" style="font-size:13px;" width="20%">堅</td>
+                            <td id="" class="kishonan" style="font-size:13px;" width="20%">難</td>
+                          </tr>
+                          <tr>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[5]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[6]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[7]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[8]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[9]}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </v-card>                  
+                  </v-col>
+                </v-row>
+                <v-row v-else>
+                  <v-col cols="5">
+                    <v-card elevation="0"> 
+                      <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
+                        <tbody>
+                          <tr>
+                            <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="5">理論血統</td>
+                          </tr>
+                          <tr>
+                            <td style="border-left:hidden; border-bottom:hidden; border-top:hidden; text-align:center; font-weight:bold">面白</td>
+                            <td id="dam_group_1" class="UndefinedGr" width="20%">{{Dam_grp_attrib[0]}}</td>
+                            <td id="dam_group_9" class="UndefinedGr" width="20%">{{Dam_grp_attrib[1]}}</td>
+                            <td id="dam_group_5" class="UndefinedGr" width="20%">{{Dam_grp_attrib[2]}}</td>
+                            <td id="dam_group_13" class="UndefinedGr" width="20%">{{Dam_grp_attrib[3]}}</td>
+                          </tr>
+                          <tr>
+                            <td style="border-left:hidden; border-bottom:hidden; border-top:hidden; text-align:center; font-weight:bold">見事</td>
+                            <td id="dam_group_17" class="UndefinedGr" width="20%">{{Dam_grp_attrib[4]}}</td>
+                            <td id="dam_group_21" class="UndefinedGr" width="20%">{{Dam_grp_attrib[5]}}</td>
+                            <td id="dam_group_25" class="UndefinedGr" width="20%">{{Dam_grp_attrib[6]}}</td>
+                            <td id="dam_group_29" class="UndefinedGr" width="20%">{{Dam_grp_attrib[7]}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </v-card>
+                  </v-col>
+                  <v-col cols="7">
+                    <v-card elevation="0"> 
+                      <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
+                        <tbody>
+                          <tr>
+                            <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="10">ニトロ</td>
+                          </tr>
+                          <tr>
+                            <td id="" class="tankyori" style="font-size:13px;" width="10%">短</td>
+                            <td id="" class="sokuryoku" style="font-size:13px;" width="10%">速</td>
+                            <td id="" class="sokodikara" style="font-size:13px;" width="10%">底</td>
+                            <td id="" class="chokyori" style="font-size:13px;" width="10%">長</td>
+                            <td id="" class="dart" style="font-size:13px;" width="10%">ダ</td>
+                            <td id="" class="jobu" style="font-size:13px;" width="10%">丈</td>
+                            <td id="" class="sojuku" style="font-size:13px;" width="10%">早</td>
+                            <td id="" class="bansei" style="font-size:13px;" width="10%">晩</td>
+                            <td id="" class="kenjitu" style="font-size:13px;" width="10%">堅</td>
+                            <td id="" class="kishonan" style="font-size:13px;" width="10%">難</td>
+                          </tr>
+                          <tr>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[0]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[1]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[2]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[3]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[4]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[5]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[6]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[7]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[8]}}</td>
+                            <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Dam_nitro[9]}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </v-card>                  
+                  </v-col>
+                </v-row>
+              </div>
+
               <v-checkbox  v-model="dam_pedigree_active" label="血統を表示" />   
               <v-expand-transition>
                 <v-card v-show="dam_pedigree_active" elevation=0>
@@ -250,24 +455,28 @@
                         <td id="dam-name-1" colspan="4">{{Dam_data.data[1]}}</td>
                         <td id="dam-attrib-1-1" width="10%">{{def_attrib[Dam_pdg_attrib[1][0]]}}</td>
                         <td id="dam-attrib-1-2" width="10%">{{def_attrib[Dam_pdg_attrib[1][1]]}}</td>
+                        <td id="dam-attrib-1-3" width="10%">{{def_attrib[Dam_pdg_attrib[1][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="colt" rowspan="4" width="5%">父</td>
                         <td id="dam-name-3" colspan="3">{{Dam_data.data[3]}}</td>
                         <td id="dam-attrib-3-1">{{def_attrib[Dam_pdg_attrib[3][0]]}}</td>
                         <td id="dam-attrib-3-2">{{def_attrib[Dam_pdg_attrib[3][1]]}}</td>
+                        <td id="dam-attrib-3-3">{{def_attrib[Dam_pdg_attrib[3][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="colt" rowspan="2" width="5%">父</td>
                         <td id="dam-name-7" colspan="2">{{Dam_data.data[7]}}</td>
                         <td id="dam-attrib-7-1">{{def_attrib[Dam_pdg_attrib[7][0]]}}</td>
                         <td id="dam-attrib-7-2">{{def_attrib[Dam_pdg_attrib[7][1]]}}</td>
+                        <td id="dam-attrib-7-3">{{def_attrib[Dam_pdg_attrib[7][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="colt" style="width:5%">父</td>
                         <td id="dam-name-15" >{{Dam_data.data[15]}}</td>
                         <td id="dam-attrib-15-1">{{def_attrib[Dam_pdg_attrib[15][0]]}}</td>
                         <td id="dam-attrib-15-2">{{def_attrib[Dam_pdg_attrib[15][1]]}}</td>
+                        <td id="dam-attrib-15-3">{{def_attrib[Dam_pdg_attrib[15][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="filly">母</td>
@@ -275,6 +484,7 @@
                         <td id="dam-name-17" >{{Dam_data.data[17]}}</td>
                         <td id="dam-attrib-17-1">{{def_attrib[Dam_pdg_attrib[17][0]]}}</td>
                         <td id="dam-attrib-17-2">{{def_attrib[Dam_pdg_attrib[17][1]]}}</td>
+                        <td id="dam-attrib-17-3">{{def_attrib[Dam_pdg_attrib[17][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="filly" rowspan="3">母</td>
@@ -282,12 +492,14 @@
                         <td id="dam-name-9" colspan="2">{{Dam_data.data[9]}}</td>
                         <td id="dam-attrib-9-1">{{def_attrib[Dam_pdg_attrib[9][0]]}}</td>
                         <td id="dam-attrib-9-2">{{def_attrib[Dam_pdg_attrib[9][1]]}}</td>
+                        <td id="dam-attrib-9-3">{{def_attrib[Dam_pdg_attrib[9][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="colt" >父</td>
                         <td id="dam-name-19" >{{Dam_data.data[19]}}</td>
                         <td id="dam-attrib-19-1">{{def_attrib[Dam_pdg_attrib[19][0]]}}</td>
                         <td id="dam-attrib-19-2">{{def_attrib[Dam_pdg_attrib[19][1]]}}</td>
+                        <td id="dam-attrib-19-3">{{def_attrib[Dam_pdg_attrib[19][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="filly">母</td>
@@ -295,6 +507,7 @@
                         <td id="dam-name-21" >{{Dam_data.data[21]}}</td>
                         <td id="dam-attrib-21-1">{{def_attrib[Dam_pdg_attrib[21][0]]}}</td>
                         <td id="dam-attrib-21-2">{{def_attrib[Dam_pdg_attrib[21][1]]}}</td>
+                        <td id="dam-attrib-21-3">{{def_attrib[Dam_pdg_attrib[21][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="filly" rowspan="7">母</td>
@@ -302,18 +515,21 @@
                         <td id="dam-name-5" colspan="3">{{Dam_data.data[5]}}</td>
                         <td id="dam-attrib-5-1">{{def_attrib[Dam_pdg_attrib[5][0]]}}</td>
                         <td id="dam-attrib-5-2">{{def_attrib[Dam_pdg_attrib[5][1]]}}</td>
+                        <td id="dam-attrib-5-3">{{def_attrib[Dam_pdg_attrib[5][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="colt" rowspan="2">父</td>
                         <td id="dam-name-11" colspan="2">{{Dam_data.data[11]}}</td>
                         <td id="dam-attrib-11-1">{{def_attrib[Dam_pdg_attrib[11][0]]}}</td>
                         <td id="dam-attrib-11-2">{{def_attrib[Dam_pdg_attrib[11][1]]}}</td>
+                        <td id="dam-attrib-11-3">{{def_attrib[Dam_pdg_attrib[11][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="colt" >父</td>
                         <td id="dam-name-23" >{{Dam_data.data[23]}}</td>
                         <td id="dam-attrib-23-1">{{def_attrib[Dam_pdg_attrib[23][0]]}}</td>
                         <td id="dam-attrib-23-2">{{def_attrib[Dam_pdg_attrib[23][1]]}}</td>
+                        <td id="dam-attrib-23-3">{{def_attrib[Dam_pdg_attrib[23][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="filly">母</td>
@@ -321,6 +537,7 @@
                         <td id="dam-name-25" >{{Dam_data.data[25]}}</td>
                         <td id="dam-attrib-25-1">{{def_attrib[Dam_pdg_attrib[25][0]]}}</td>
                         <td id="dam-attrib-25-2">{{def_attrib[Dam_pdg_attrib[25][1]]}}</td>
+                        <td id="dam-attrib-25-3">{{def_attrib[Dam_pdg_attrib[25][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="filly" rowspan="3">母</td>
@@ -328,12 +545,14 @@
                         <td id="dam-name-13" colspan="2">{{Dam_data.data[13]}}</td>
                         <td id="dam-attrib-13-1">{{def_attrib[Dam_pdg_attrib[13][0]]}}</td>
                         <td id="dam-attrib-13-2">{{def_attrib[Dam_pdg_attrib[13][1]]}}</td>
+                        <td id="dam-attrib-13-3">{{def_attrib[Dam_pdg_attrib[13][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="colt">父</td>
                         <td id="dam-name-27" >{{Dam_data.data[27]}}</td>
                         <td id="dam-attrib-27-1">{{def_attrib[Dam_pdg_attrib[27][0]]}}</td>
                         <td id="dam-attrib-27-2">{{def_attrib[Dam_pdg_attrib[27][1]]}}</td>
+                        <td id="dam-attrib-27-3">{{def_attrib[Dam_pdg_attrib[27][2]]}}</td>
                       </tr>
                       <tr>
                         <td class="filly">母</td>
@@ -341,6 +560,7 @@
                         <td id="dam-name-29" >{{Dam_data.data[29]}}</td>
                         <td id="dam-attrib-29-1">{{def_attrib[Dam_pdg_attrib[29][0]]}}</td>
                         <td id="dam-attrib-29-2">{{def_attrib[Dam_pdg_attrib[29][1]]}}</td>
+                        <td id="dam-attrib-29-3">{{def_attrib[Dam_pdg_attrib[29][2]]}}</td>
                       </tr>                
                     </tbody>
                   </table>
@@ -349,6 +569,7 @@
             </v-spacer>
           </v-card>
         </v-col>
+
       </v-row>
     </v-layout>
     <v-spacer class="my-10 px-0 mx-0 my-0" />
@@ -361,46 +582,137 @@
                 <v-card-title style="font-size:24px;font-weight:bolder;" class="px-0" outlined>
                   {{this.Sire_data.name}} × {{this.Dam_data.name}}
                 </v-card-title>
-                <v-row>
-                  <v-col cols="6" sm="6" md="6" lg="6" xl="3">
-                    <v-card elevation="0"> 
-                      <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
-                        <tbody>
-                          <tr>
-                            <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="2">面白血統</td>
-                          </tr>
-                          <tr>
-                            <td id="foal_group_1" class="UndefinedGr" width="20%">{{Sire_grp_attrib[0]}}</td>
-                            <td id="foal_group_5" class="UndefinedGr" width="20%">{{Dam_grp_attrib[0]}}</td>
-                          </tr>
-                          <tr>
-                            <td id="foal_group_9" class="UndefinedGr" width="20%">{{Sire_grp_attrib[2]}}</td>
-                            <td id="foal_group_13" class="UndefinedGr" width="20%">{{Dam_grp_attrib[2]}}</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </v-card>
-                  </v-col>
-                  <v-col cols="6" sm="6" md="6" lg="6" xl="3">
-                    <v-card elevation="0"> 
-                      <table style="table-layout: fixed; width: 100%; border-collapse:collapse;">
-                        <tbody>
-                          <tr>
-                            <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="2">見事血統</td>
-                          </tr>
-                          <tr>
-                            <td id="foal_group_17" class="UndefinedGr" width="20%">{{Sire_grp_attrib[1]}}</td>
-                            <td id="foal_group_25" class="UndefinedGr" width="20%">{{Dam_grp_attrib[1]}}</td>
-                          </tr>
-                          <tr>
-                            <td id="foal_group_21" class="UndefinedGr" width="20%">{{Sire_grp_attrib[3]}}</td>
-                            <td id="foal_group_29" class="UndefinedGr" width="20%">{{Dam_grp_attrib[3]}}</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </v-card>
-                  </v-col>
-                </v-row>
+                <div>
+                  <v-row v-if="$vuetify.breakpoint.xs">
+                    <v-col cols="12">
+                      <v-card elevation="0"> 
+                        <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
+                          <tbody>
+                            <tr>
+                              <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="5">理論血統</td>
+                            </tr>
+                            <tr>
+                              <td style="border-left:hidden; border-bottom:hidden; border-top:hidden; text-align:center; font-weight:bold">面白</td>
+                              <td id="foal_group_1" class="UndefinedGr" width="20%">{{Sire_grp_attrib[0]}}</td>
+                              <td id="foal_group_9" class="UndefinedGr" width="20%">{{Sire_grp_attrib[2]}}</td>
+                              <td id="foal_group_5" class="UndefinedGr" width="20%">{{Dam_grp_attrib[0]}}</td>
+                              <td id="foal_group_13" class="UndefinedGr" width="20%">{{Dam_grp_attrib[2]}}</td>
+                            </tr>
+                            <tr>
+                              <td style="border-left:hidden; border-bottom:hidden; border-top:hidden; text-align:center; font-weight:bold">見事</td>
+                              <td id="foal_group_17" class="UndefinedGr" width="20%">{{Sire_grp_attrib[1]}}</td>
+                              <td id="foal_group_21" class="UndefinedGr" width="20%">{{Sire_grp_attrib[3]}}</td>
+                              <td id="foal_group_25" class="UndefinedGr" width="20%">{{Dam_grp_attrib[1]}}</td>
+                              <td id="foal_group_29" class="UndefinedGr" width="20%">{{Dam_grp_attrib[3]}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </v-card>
+                    </v-col>
+                    <v-col cols="12">
+                      <v-card elevation="0"> 
+                        <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
+                          <tbody>
+                            <tr>
+                              <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="5">ニトロ</td>
+                            </tr>
+                            <tr>
+                              <td id="" class="tankyori" style="font-size:13px;" width="20%">短</td>
+                              <td id="" class="sokuryoku" style="font-size:13px;" width="20%">速</td>
+                              <td id="" class="sokodikara" style="font-size:13px;" width="20%">底</td>
+                              <td id="" class="chokyori" style="font-size:13px;" width="20%">長</td>
+                              <td id="" class="dart" style="font-size:13px;" width="20%">ダ</td>
+                            </tr>
+                            <tr>
+                              <td  style="font-size: 13px; text-align:center; padding: 0px;padding-left: 0px;">{{Foal_nitro[0]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[1]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[2]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[3]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[4]}}</td>
+
+                            </tr>
+                            <tr>
+                              <td id="" class="jobu" style="font-size:13px;" width="20%">丈</td>
+                              <td id="" class="sojuku" style="font-size:13px;" width="20%">早</td>
+                              <td id="" class="bansei" style="font-size:13px;" width="20%">晩</td>
+                              <td id="" class="kenjitu" style="font-size:13px;" width="20%">堅</td>
+                              <td id="" class="kishonan" style="font-size:13px;" width="20%">難</td>
+                            </tr>
+                            <tr>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[5]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[6]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[7]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[8]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[9]}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </v-card>                  
+                    </v-col>
+                  </v-row>
+                  <v-row v-else>
+                    <v-col cols="5">
+                      <v-card elevation="0"> 
+                        <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
+                          <tbody>
+                            <tr>
+                              <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="5">理論血統</td>
+                            </tr>
+                            <tr>
+                              <td style="border-left:hidden; border-bottom:hidden; border-top:hidden; text-align:center; font-weight:bold">面白</td>
+                              <td id="foal_group_1" class="UndefinedGr" width="20%">{{Sire_grp_attrib[0]}}</td>
+                              <td id="foal_group_9" class="UndefinedGr" width="20%">{{Sire_grp_attrib[2]}}</td>
+                              <td id="foal_group_5" class="UndefinedGr" width="20%">{{Dam_grp_attrib[0]}}</td>
+                              <td id="foal_group_13" class="UndefinedGr" width="20%">{{Dam_grp_attrib[2]}}</td>
+                            </tr>
+                            <tr>
+                              <td style="border-left:hidden; border-bottom:hidden; border-top:hidden; text-align:center; font-weight:bold">見事</td>
+                              <td id="foal_group_17" class="UndefinedGr" width="20%">{{Sire_grp_attrib[1]}}</td>
+                              <td id="foal_group_21" class="UndefinedGr" width="20%">{{Sire_grp_attrib[3]}}</td>
+                              <td id="foal_group_25" class="UndefinedGr" width="20%">{{Dam_grp_attrib[1]}}</td>
+                              <td id="foal_group_29" class="UndefinedGr" width="20%">{{Dam_grp_attrib[3]}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </v-card>
+                    </v-col>
+                    <v-col cols="7">
+                      <v-card elevation="0"> 
+                        <table style="table-layout: fixed; width: 100%;border-collapse:collapse;">
+                          <tbody>
+                            <tr>
+                              <td style="border:hidden; border-bottom:1px; text-align:center; font-weight:bold" colspan="10">ニトロ</td>
+                            </tr>
+                            <tr>
+                              <td id="" class="tankyori" style="font-size:13px;" width="10%">短</td>
+                              <td id="" class="sokuryoku" style="font-size:13px;" width="10%">速</td>
+                              <td id="" class="sokodikara" style="font-size:13px;" width="10%">底</td>
+                              <td id="" class="chokyori" style="font-size:13px;" width="10%">長</td>
+                              <td id="" class="dart" style="font-size:13px;" width="10%">ダ</td>
+                              <td id="" class="jobu" style="font-size:13px;" width="10%">丈</td>
+                              <td id="" class="sojuku" style="font-size:13px;" width="10%">早</td>
+                              <td id="" class="bansei" style="font-size:13px;" width="10%">晩</td>
+                              <td id="" class="kenjitu" style="font-size:13px;" width="10%">堅</td>
+                              <td id="" class="kishonan" style="font-size:13px;" width="10%">難</td>
+                            </tr>
+                            <tr>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[0]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[1]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[2]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[3]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[4]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[5]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[6]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[7]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[8]}}</td>
+                              <td  style="font-size: 13px; text-align:center;padding: 0px;padding-left: 0px;">{{Foal_nitro[9]}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </v-card>                  
+                    </v-col>
+                  </v-row>
+                </div>               
                 <v-spacer class="my-5"/>
                 <v-card max-width="100%">
                   <v-row class="mx-auto">
@@ -416,36 +728,26 @@
                       </v-card>
                     </v-col>
                     <v-col>
-                      <v-row >
-                        <v-col cols="4" sm="4" md="3" lg="3" xl="3" v-for="attr in mating_result.attrib" v-bind:key="attr.name">
-                          <v-card class="mx-auto my-4" max-width="100%" elevation=0 >
-                            <v-row >
-                              <v-col cols="2" class="mx-3">
-                                <v-avatar
-                                  :class="def_attrib_class[def_attrib.indexOf(attr.name)]"
-                                  style="border:outset;"
-                                  tile
-                                  size="24"
-                                >
-                                  <span class="text-body-2">{{attr.name}}</span>
-                                </v-avatar>
-                              </v-col>
-                              <v-col>
-                                <v-avatar
-                                  title
-                                  size="24"
-                                  class="mx-n2"
-                                >
-                                  <span class="text-h6">{{attr.num}}</span>
-                                </v-avatar>
-                              </v-col>
-                            </v-row>
+                      <v-row justify="center" align="center">
+                        <v-col>
+                          <v-card height="200%" elevation=0>
+                            <span v-for="attr in mating_result.attrib" v-bind:key="attr.name">
+                              <span style="display: inline-block;">
+                                <span :class="def_attrib_class[def_attrib.indexOf(attr.name)]" style="font-size:13px; padding: 1px; padding-left:1px;">
+                                  {{attr.name}}
+                                </span>
+                                <span class="font-size:15px;"> 
+                                  &nbsp;{{attr.num}}&nbsp;&nbsp;
+                                </span>
+                              </span>
+                            </span> 
                           </v-card>
                         </v-col>
                       </v-row>
-                    </v-col>                      
+                    </v-col>
+                    
                   </v-row>
-                  <v-spacer class="my-5"/>
+                  <v-spacer class="my-10"/>
                   <v-row align-content="center" class="my-n8" v-if="mating_result.inbleed.length>0">
                     <v-col cols="12" v-for="inbleeded in mating_result.inbleed" v-bind:key="inbleeded.name">
                       <v-card class="mx-auto" max-width="100%" max-height="50%" elevation=0 >
@@ -483,24 +785,28 @@
                                 <td id="foal-name-1" colspan="4">{{Sire_data.data[0]}}</td>
                                 <td id="foal-attrib-1-1" width="10%">{{def_attrib[Sire_pdg_attrib[0][0]]}}</td>
                                 <td id="foal-attrib-1-2" width="10%">{{def_attrib[Sire_pdg_attrib[0][1]]}}</td>
+                                <td id="foal-attrib-1-3" width="10%">{{def_attrib[Sire_pdg_attrib[0][2]]}}</td>
                               </tr>
                               <tr>
                                 <td class="colt" rowspan="4" width="5%">父</td>
                                 <td id="foal-name-3" colspan="3">{{Sire_data.data[1]}}</td>
                                 <td id="foal-attrib-3-1">{{def_attrib[Sire_pdg_attrib[1][0]]}}</td>
                                 <td id="foal-attrib-3-2">{{def_attrib[Sire_pdg_attrib[1][1]]}}</td>
+                                <td id="foal-attrib-3-3">{{def_attrib[Sire_pdg_attrib[1][2]]}}</td>
                               </tr>
                               <tr>
                                 <td class="colt" rowspan="2" width="5%">父</td>
                                 <td id="foal-name-7" colspan="2">{{Sire_data.data[3]}}</td>
                                 <td id="foal-attrib-7-1">{{def_attrib[Sire_pdg_attrib[3][0]]}}</td>
                                 <td id="foal-attrib-7-2">{{def_attrib[Sire_pdg_attrib[3][1]]}}</td>
+                                <td id="foal-attrib-7-3">{{def_attrib[Sire_pdg_attrib[3][2]]}}</td>
                               </tr>
                               <tr>
                                 <td class="colt" style="width:5%">父</td>
                                 <td id="foal-name-15" >{{Sire_data.data[7]}}</td>
                                 <td id="foal-attrib-15-1">{{def_attrib[Sire_pdg_attrib[7][0]]}}</td>
                                 <td id="foal-attrib-15-2">{{def_attrib[Sire_pdg_attrib[7][1]]}}</td>
+                                <td id="foal-attrib-15-3">{{def_attrib[Sire_pdg_attrib[7][2]]}}</td>
                               </tr>
                               <tr>
                                 <td class="filly">母</td>
@@ -508,6 +814,7 @@
                                 <td id="foal-name-17" >{{Sire_data.data[9]}}</td>
                                 <td id="foal-attrib-17-1">{{def_attrib[Sire_pdg_attrib[9][0]]}}</td>
                                 <td id="foal-attrib-17-2">{{def_attrib[Sire_pdg_attrib[9][1]]}}</td>
+                                <td id="foal-attrib-17-3">{{def_attrib[Sire_pdg_attrib[9][2]]}}</td>
                               </tr>
                               <tr>
                                 <td class="filly" rowspan="3">母</td>
@@ -515,12 +822,14 @@
                                 <td id="foal-name-9" colspan="2">{{Sire_data.data[5]}}</td>
                                 <td id="foal-attrib-9-1">{{def_attrib[Sire_pdg_attrib[5][0]]}}</td>
                                 <td id="foal-attrib-9-2">{{def_attrib[Sire_pdg_attrib[5][1]]}}</td>
+                                <td id="foal-attrib-9-3">{{def_attrib[Sire_pdg_attrib[5][2]]}}</td>
                               </tr>
                               <tr>
                                 <td class="colt" >父</td>
                                 <td id="foal-name-19" >{{Sire_data.data[11]}}</td>
                                 <td id="foal-attrib-19-1">{{def_attrib[Sire_pdg_attrib[11][0]]}}</td>
                                 <td id="foal-attrib-19-2">{{def_attrib[Sire_pdg_attrib[11][1]]}}</td>
+                                <td id="foal-attrib-19-3">{{def_attrib[Sire_pdg_attrib[11][2]]}}</td>
                               </tr>
                               <tr>
                                 <td class="filly">母</td>
@@ -528,6 +837,7 @@
                                 <td id="foal-name-21" >{{Sire_data.data[13]}}</td>
                                 <td id="foal-attrib-21-1">{{def_attrib[Sire_pdg_attrib[13][0]]}}</td>
                                 <td id="foal-attrib-21-2">{{def_attrib[Sire_pdg_attrib[13][1]]}}</td>
+                                <td id="foal-attrib-21-3">{{def_attrib[Sire_pdg_attrib[13][2]]}}</td>
                               </tr>
                               <tr>
                                 <td class="filly" rowspan="7">母</td>
@@ -535,18 +845,21 @@
                                 <td id="foal-name-5" colspan="3">{{Dam_data.data[1]}}</td>
                                 <td id="foal-attrib-5-1">{{def_attrib[Dam_pdg_attrib[1][0]]}}</td>
                                 <td id="foal-attrib-5-2">{{def_attrib[Dam_pdg_attrib[1][1]]}}</td>
+                                <td id="foal-attrib-5-3">{{def_attrib[Dam_pdg_attrib[1][2]]}}</td>
                               </tr>
                               <tr>
                                 <td class="colt" rowspan="2">父</td>
                                 <td id="foal-name-11" colspan="2">{{Dam_data.data[3]}}</td>
                                 <td id="foal-attrib-11-1">{{def_attrib[Dam_pdg_attrib[3][0]]}}</td>
                                 <td id="foal-attrib-11-2">{{def_attrib[Dam_pdg_attrib[3][1]]}}</td>
+                                <td id="foal-attrib-11-3">{{def_attrib[Dam_pdg_attrib[3][2]]}}</td>
                               </tr>
                               <tr>
                                 <td class="colt" >父</td>
                                 <td id="foal-name-23" >{{Dam_data.data[7]}}</td>
                                 <td id="foal-attrib-23-1">{{def_attrib[Dam_pdg_attrib[7][0]]}}</td>
                                 <td id="foal-attrib-23-2">{{def_attrib[Dam_pdg_attrib[7][1]]}}</td>
+                                <td id="foal-attrib-23-3">{{def_attrib[Dam_pdg_attrib[7][2]]}}</td>
                               </tr>
                               <tr>
                                 <td class="filly">母</td>
@@ -554,6 +867,7 @@
                                 <td id="foal-name-25" >{{Dam_data.data[9]}}</td>
                                 <td id="foal-attrib-25-1">{{def_attrib[Dam_pdg_attrib[9][0]]}}</td>
                                 <td id="foal-attrib-25-2">{{def_attrib[Dam_pdg_attrib[9][1]]}}</td>
+                                <td id="foal-attrib-25-3">{{def_attrib[Dam_pdg_attrib[9][2]]}}</td>
                               </tr>
                               <tr>
                                 <td class="filly" rowspan="3">母</td>
@@ -561,12 +875,14 @@
                                 <td id="foal-name-13" colspan="2">{{Dam_data.data[5]}}</td>
                                 <td id="foal-attrib-13-1">{{def_attrib[Dam_pdg_attrib[5][0]]}}</td>
                                 <td id="foal-attrib-13-2">{{def_attrib[Dam_pdg_attrib[5][1]]}}</td>
+                                <td id="foal-attrib-13-3">{{def_attrib[Dam_pdg_attrib[5][2]]}}</td>
                               </tr>
                               <tr>
                                 <td class="colt">父</td>
                                 <td id="foal-name-27" >{{Dam_data.data[11]}}</td>
                                 <td id="foal-attrib-27-1">{{def_attrib[Dam_pdg_attrib[11][0]]}}</td>
                                 <td id="foal-attrib-27-2">{{def_attrib[Dam_pdg_attrib[11][1]]}}</td>
+                                <td id="foal-attrib-27-3">{{def_attrib[Dam_pdg_attrib[11][2]]}}</td>
                               </tr>
                               <tr>
                                 <td class="filly">母</td>
@@ -574,6 +890,7 @@
                                 <td id="foal-name-29" >{{Dam_data.data[13]}}</td>
                                 <td id="foal-attrib-29-1">{{def_attrib[Dam_pdg_attrib[13][0]]}}</td>
                                 <td id="foal-attrib-29-2">{{def_attrib[Dam_pdg_attrib[13][1]]}}</td>
+                                <td id="foal-attrib-29-3">{{def_attrib[Dam_pdg_attrib[13][2]]}}</td>
                               </tr>                
                             </tbody>
                           </table>
@@ -617,7 +934,13 @@
         </v-col>
       </v-row>
     </v-layout>
-    <v-spacer class="my-0 px-0 mx-0 py-0" />
+    <div v-if="mating_result_active">
+      <v-spacer class="my-7 px-0 mx-0 py-0" />
+    </div>
+    <div v-else>
+      <v-spacer class="my-0 px-0 mx-0 py-0" />
+    </div>
+
     <v-layout justify-center>
       <v-row class="mx-5">
         <v-col cols="12"> 
@@ -644,14 +967,18 @@
       Dam_data: {"data": Array(62)},
       myDam:[],
       attrib_data: [],
-      Sire_pdg_attrib:Array(63).fill(["",""]),
-      Dam_pdg_attrib: Array(63).fill(["",""]),
-      Foal_pdg_attrib: Array(63).fill(["",""]),
+      Sire_pdg_attrib:Array(63).fill(["","",""]),
+      Sire_nitro:Array(10).fill("00"),
+      Dam_pdg_attrib: Array(63).fill(["","",""]),
+      Dam_nitro:Array(10).fill("00"),
+      Foal_pdg_attrib: Array(63).fill(["","",""]),
+      Foal_nitro:Array(10).fill("00"),
       Sire_grp_attrib:Array(9).fill(""),
       Dam_grp_attrib: Array(9).fill(""),
       Foal_grp_attrib: Array(9).fill(""),
       sire_pedigree_active: false,
       dam_pedigree_active: false,
+      Foal_attrib_array: Array(3).fill(""),
       def_attrib: ["","短","速","底","長","ダ","丈","早","晩","堅","難"],
       def_attrib_class: ["","tankyori","sokuryoku","sokodikara","chokyori","dart","jobu","sojuku","bansei","kenjitu","kishonan"],
 
@@ -681,7 +1008,8 @@
         const pdg_attrib = sire_attrib.attrib.slice(9).map(data=>{
           return [
             parseInt(data.substr(0, 2),16),
-            parseInt(data.substr(2, 2),16)
+            parseInt(data.substr(2, 2),16),
+            parseInt(data.substr(4, 2),16),
           ]
         })
         return [
@@ -691,69 +1019,102 @@
       },
 
       sire_selected(){
-        var res = this.ac_selected(this.Sire_data)
-        this.Sire_pdg_attrib = res[0]
-        this.Sire_grp_attrib = res[1]
-        const indexes = [[1,3,7,15],[9,19],[5,11,23],[13,27],[17],[21],[25],[29]];
-        const attributes = [
-          "no-attributes",
-          "tankyori",
-          "sokuryoku",
-          "sokodikara",
-          "chokyori",
-          "dart",
-          "jobu",
-          "sojuku",
-          "bansei",
-          "kenjitu",
-          "kishonan"
-        ]
-        indexes.map((data,index)=>{
-          var item = document.getElementById('sire_group_' + data[0]);
-          item.className = this.Sire_grp_attrib[index];
+        if(this.mySire.name!=""){
+          this.Sire_nitro=Array(10).fill("00");
+          var res = this.ac_selected(this.Sire_data)
+          this.Sire_pdg_attrib = res[0]
+          this.Sire_grp_attrib = res[1]
+          const indexes = [[1,3,7,15],[9,19],[5,11,23],[13,27],[17],[21],[25],[29]];
+          const attributes = [
+            "no-attributes",
+            "tankyori",
+            "sokuryoku",
+            "sokodikara",
+            "chokyori",
+            "dart",
+            "jobu",
+            "sojuku",
+            "bansei",
+            "kenjitu",
+            "kishonan"
+          ]
+          indexes.map((data,index)=>{
+            var item = document.getElementById('sire_group_' + data[0]);
+            item.className = this.Sire_grp_attrib[index];
+            
+            data.map(d_data=>{
+              var item = document.getElementById('sire-attrib-'+d_data+'-1');
+              item.className = attributes[this.Sire_pdg_attrib[d_data][0]];
+              item = document.getElementById('sire-attrib-'+d_data+'-2');
+              item.className = attributes[this.Sire_pdg_attrib[d_data][1]];
+              item = document.getElementById('sire-attrib-'+d_data+'-3');
+              item.className = attributes[this.Sire_pdg_attrib[d_data][2]];
+              return true;  
+            })
+          });
           
-          data.map(d_data=>{
-            var item = document.getElementById('sire-attrib-'+d_data+'-1');
-            item.className = attributes[this.Sire_pdg_attrib[d_data][0]];
-            item = document.getElementById('sire-attrib-'+d_data+'-2');
-            item.className = attributes[this.Sire_pdg_attrib[d_data][1]];
-            return true;
+          [0,1,3,7,15,17,9,19,21,5,11,23,25,13,27,29].map(data_index=>{
+            [0,1,2].map(index=>{
+              if(this.Sire_pdg_attrib[data_index][index] >= 1){
+
+                var num = parseInt(this.Sire_nitro[this.Sire_pdg_attrib[data_index][index]-1],10) + 1;
+                this.Sire_nitro[this.Sire_pdg_attrib[data_index][index]-1] = ('00'+num).slice(-2);
+
+              }
+            })
           })
-        })
-        this.compute_relative()
+          this.compute_relative();
+
+        }
       },
       
       dam_selected(){
-        var res = this.ac_selected(this.Dam_data)
-        this.Dam_pdg_attrib = res[0]
-        this.Dam_grp_attrib = res[1]
-        const indexes = [[1,3,7,15],[9,19],[5,11,23],[13,27],[17],[21],[25],[29]];
-        const attributes = [
-          "no-attributes",
-          "tankyori",
-          "sokuryoku",
-          "sokodikara",
-          "chokyori",
-          "dart",
-          "jobu",
-          "sojuku",
-          "bansei",
-          "kenjitu",
-          "kishonan"
-        ]
-        indexes.map((data,index)=>{
-          var item = document.getElementById('dam_group_' + data[0]);
-          item.className = this.Dam_grp_attrib[index];
-          
-          data.map(d_data=>{
-            var item = document.getElementById('dam-attrib-'+d_data+'-1');
-            item.className = attributes[this.Dam_pdg_attrib[d_data][0]];
-            item = document.getElementById('dam-attrib-'+d_data+'-2');
-            item.className = attributes[this.Dam_pdg_attrib[d_data][1]];
-            return true;
+        if(this.myDam.name!=""){
+          this.Dam_nitro=Array(10).fill("00");
+          var res = this.ac_selected(this.Dam_data)
+          this.Dam_pdg_attrib = res[0]
+          this.Dam_grp_attrib = res[1]
+          const indexes = [[1,3,7,15],[9,19],[5,11,23],[13,27],[17],[21],[25],[29]];
+          const attributes = [
+            "no-attributes",
+            "tankyori",
+            "sokuryoku",
+            "sokodikara",
+            "chokyori",
+            "dart",
+            "jobu",
+            "sojuku",
+            "bansei",
+            "kenjitu",
+            "kishonan"
+          ]
+          indexes.map((data,index)=>{
+            var item = document.getElementById('dam_group_' + data[0]);
+            item.className = this.Dam_grp_attrib[index];
+            
+            data.map(d_data=>{
+              var item = document.getElementById('dam-attrib-'+d_data+'-1');
+              item.className = attributes[this.Dam_pdg_attrib[d_data][0]];
+              item = document.getElementById('dam-attrib-'+d_data+'-2');
+              item.className = attributes[this.Dam_pdg_attrib[d_data][1]];
+              item = document.getElementById('dam-attrib-'+d_data+'-3');
+              item.className = attributes[this.Dam_pdg_attrib[d_data][2]];
+              return true;
+            })
+          });
+          [1,3,7,15,17,9,19,21,5,11,23,25,13,27,29].map(data_index=>{
+            [0,1,2].map(index=>{
+              if(this.Dam_pdg_attrib[data_index][index] >= 1){
+
+                var num = parseInt(this.Dam_nitro[this.Dam_pdg_attrib[data_index][index]-1],10) + 1;
+                this.Dam_nitro[this.Dam_pdg_attrib[data_index][index]-1] = ('00'+num).slice(-2);
+
+              }
+            })
           })
-        })
-        this.compute_relative()
+          this.compute_relative()
+
+        }
       },
 
       toHex(num,fm){
@@ -844,7 +1205,7 @@
             this.foal_pedigree.data[61] = this.Dam_data.data[29]
             this.foal_pedigree.data[62] = this.Dam_data.data[30]
 
-            this.Foal_pdg_attrib[0] = ["",""]
+            this.Foal_pdg_attrib[0] = ["","",""]
             this.Foal_pdg_attrib[1] = this.Sire_pdg_attrib[0]
             this.Foal_pdg_attrib[3] = this.Sire_pdg_attrib[1]
             this.Foal_pdg_attrib[4] = this.Sire_pdg_attrib[2]
@@ -912,7 +1273,7 @@
           }
 
           var foal_attrib = this.Foal_grp_attrib.concat(this.Foal_pdg_attrib.map(elm=>{
-            return this.toHex(elm[0]*256+elm[1],'0000')
+            return this.toHex(elm[0]*256*256+elm[1]*256+elm[2],'000000')
           }))
           foal_attrib = [{"name": this.foal_name, "attrib": foal_attrib}]
           
@@ -1063,17 +1424,20 @@
           return [this.Sire_data.data[elm[0]],this.Dam_data.data[elm[1]]]
         })
         inbleed_horse_name = Array.from(new Set(inbleed_horse_name.flat())) 
-        
         inbleed_result = inbleed_result.filter(elm=>{
-          var child_data_a = this.Sire_data.data[(elm[0]%2===1)? parseInt((elm[0]-1)/2.0) : parseInt((elm[0]-2)/2.0)];
-          var child_data_b = this.Dam_data.data[(elm[1]%2===1)? parseInt((elm[1]-1)/2.0) : parseInt((elm[1]-2)/2.0)];
-          return (!(inbleed_horse_name.includes(child_data_a)) & !(inbleed_horse_name.includes(child_data_b)))
+
+          var child_data_f = (elm[0]%2===1)? parseInt((elm[0]-1)/2.0) : parseInt((elm[0]-2)/2.0);
+          var child_data_d = (elm[1]%2===1)? parseInt((elm[1]-1)/2.0) : parseInt((elm[1]-2)/2.0);
+          var child_is_equal = ((this.Sire_data.data[child_data_f*2+1] === this.Dam_data.data[child_data_d*2+1])) & ((this.Sire_data.data[child_data_f*2+2] === this.Dam_data.data[child_data_d*2+2]))
+
+          return ((!(inbleed_horse_name.includes(this.Sire_data.data[child_data_f])) | !(inbleed_horse_name.includes(this.Dam_data.data[child_data_d])))|!child_is_equal)
         })
 
         inbleed_horse_name = inbleed_result.map((elm)=>{
           return [this.Sire_data.data[elm[0]],this.Dam_data.data[elm[1]]]
         })
         inbleed_horse_name = Array.from(new Set(inbleed_horse_name.flat()))       
+        
         return [inbleed_result,inbleed_horse_name]
       },
 
@@ -1081,6 +1445,7 @@
         if((typeof this.Dam_data.data[0]==='undefined') | (typeof this.Sire_data.data[0]==='undefined')){
           return false
         }else{
+          this.Foal_nitro=Array(10).fill("00");
           this.mating_result_active = true;
           this.mating_props = true;
           this.mating_result = {"Result": "理論なし", "inbleed": [{"name":""}], "attrib":[{"name":"", "num": 0}]};
@@ -1096,8 +1461,12 @@
             this.Foal_grp_attrib[7] = this.Dam_grp_attrib[3]
             this.Foal_grp_attrib[8] = this.Sire_grp_attrib[8]
           }
-
-          
+          Array(10).fill(0).map((d,i)=>{
+            //alert(this.Sire_nitro[i])
+            var num = parseInt(this.Sire_nitro[i],10) + parseInt(this.Dam_nitro[i],10);
+            this.Foal_nitro[i] = ('00'+num).slice(-2);
+          })
+          //alert(this.Foal_nitro)
           const id_index = [[1,3,7,15],[9,19],[5,11,23],[13,27],[17],[21],[25],[29]]
           const _index_to_foal = [0,1,3,7,5,11,-1,-3,-7,-5,-11,9,13,-9,-13]
           const attributes = [
@@ -1136,7 +1505,7 @@
             var dam_omosiro = this.Dam_grp_attrib.slice(0,4);
             
             var omosiro_num = Array.from(new Set(sire_omosiro.concat(dam_omosiro))).length;
-            var migoto_flag = (sire_migoto.sort().toString()===dam_omosiro.sort().toString())
+            var migoto_flag = (Array.from(new Set(sire_migoto)).sort().toString()===Array.from(new Set(dam_omosiro)).sort().toString())
             var _sire_migoto = Array.from(new Set(sire_migoto))
             var _dam_omosiro = Array.from(new Set(dam_omosiro))
             const reducer = (accumulator, currentValue) => accumulator + currentValue;
@@ -1145,11 +1514,37 @@
             var yokudeki_flag = (yokudeki_sire_to_dam>=3 & yokudeki_dam_to_sire>=3);
             item = document.getElementById("mating_result")
 
+            /* ここから配合判定ロジック */
+            /*
+              ~アルゴリズム解説~
+              1. 父側の面白血統と母側の面白血統の種類の数をカウント(omosiro_num)
+              2. 母側の見事血統の大血統と，父側の見事血統に居る大血統の集合差を取得(yokudeki_dam_to_sire)
+              3. 父側の見事血統の大血統と，母側の見事血統に居る大血統の集合差を取得(yokudeki_sire_to_dam)
+              4. 2., 3.で求めた値の双方ともに3以上の場合，よくできフラグを立てる
+              　 ※ 開発者は一度ここで躓いた。よくでき条件は，両親の見事血統の共通部が3血統であること。
+              　 　 ワイルドカード1枚の選び方を迷った挙句，集合論で攻める方針にした。
+              5. 父側の見事血統と母側の見事血統の種類が一致するか判定(migoto_flag)
+              6. 見事判定がTrueであり，面白個数が8個なら超完璧
+              7. 見事判定がTrueであり，面白個数が7個なら完璧
+              8. 見事判定がTrueであり，6., 7.以外なら見事
+              9. 面白判定がTrueであり，よくでき判定がTrueであり，6~8以外なら面白・よくでき
+              10.面白判定がTrueであり，よくでき判定がFalseであり，6~8以外なら面白
+              11.面白判定がFalseであり，6~8以外なら配合理論なし
+              12.危険な配合はクロス判定の箇所で判定
+              13.奇跡配合はクロス判定の箇所で判定
+            */
+
             if(omosiro_num >= 7){
               if(migoto_flag){
-                //完璧な配合
-                this.mating_result.Result = "完璧な配合"
-                item.className = "px-3 mt-4 boundary_bold mating5"
+                if(omosiro_num == 8){
+                  //超完璧な配合
+                  this.mating_result.Result = "超完璧配合"
+                  item.className = "px-3 mt-4 boundary_bold mating7"
+                }else{
+                  //完璧な配合
+                  this.mating_result.Result = "完璧な配合"
+                  item.className = "px-3 mt-4 boundary_bold mating5"
+                }
               }else{
                 if(yokudeki_flag){
                   this.mating_result.Result = "面白＆良出"
@@ -1174,6 +1569,9 @@
               }              
             }
           }
+
+          /* ここから配合判定ロジック */
+
           var counter = 0;
           var counter_b= 0;
           id_index.map((data)=>{
@@ -1183,11 +1581,15 @@
                 item.className = attributes[this.Sire_pdg_attrib[_index_to_foal[counter_b]][0]];
                 item = document.getElementById('foal-attrib-'+d_data+'-2');
                 item.className = attributes[this.Sire_pdg_attrib[_index_to_foal[counter_b]][1]];
+                item = document.getElementById('foal-attrib-'+d_data+'-3');
+                item.className = attributes[this.Sire_pdg_attrib[_index_to_foal[counter_b]][2]];
               }else{
                 item = document.getElementById('foal-attrib-'+d_data+'-1');
                 item.className = attributes[this.Dam_pdg_attrib[-_index_to_foal[counter_b]][0]];
                 item = document.getElementById('foal-attrib-'+d_data+'-2');
                 item.className = attributes[this.Dam_pdg_attrib[-_index_to_foal[counter_b]][1]];                
+                item = document.getElementById('foal-attrib-'+d_data+'-3');
+                item.className = attributes[this.Dam_pdg_attrib[-_index_to_foal[counter_b]][2]];                
               }
               counter_b = counter_b + 1;
               return true;
@@ -1196,8 +1598,6 @@
           })
 
           //ここではまだ，foalのpdg_attribは変えない
-
-          //インブリードの評価
 
           id_index.flat().map((data)=>{
             var _item = document.getElementById('sire-name-'+data);
@@ -1208,8 +1608,6 @@
             _item.className = "outbleed";
           })
           var res = this.compute_inbleed()
-          
-
           res[0].map((data)=>{
             var _item = document.getElementById('sire-name-'+data[0]);
             if(_item != null){
@@ -1231,63 +1629,111 @@
             }
           })
 
-          //インブリードしてる馬を集める
-          this.mating_result.inbleed = res[0].map((elm=>{
-            if(this.Sire_data.data[elm[0]]!=this.Dam_data.data[elm[1]]){
-              var inbleed_str_sire = this.getAllIndexes(this.Sire_data.data,this.Sire_data.data[elm[0]])
-              .concat(this.getAllIndexes(this.Dam_data.data,this.Sire_data.data[elm[0]]))
-              .map(_elm=>{
-                return (
-                  (_elm >= 31) ? 6 :
-                  (_elm < 31 & _elm >= 15) ? 5 :
-                  (_elm < 15 & _elm >= 7) ? 4 :
-                  (_elm < 7 & _elm >= 3) ? 3 :
-                  (_elm < 3 & _elm >= 1) ? 2 : 1
-                )
-              }).filter((d)=>{
-                if(d < 6){
-                  return true
+          //インブリードの評価
+          /* アルゴリズム解説
+            1. 血統中に出てくる馬の名前を配列にする。以後，馬名配列Horse_Nameと呼ぶ
+            　 父馬の4代前まで(31頭分)と母馬の4代前まで(31頭分)を1つの配列(n=62)に集める
+            　 この時，各31頭の並び順を 父→母→父父→父母→...（深さ順）としておくと，のちのクロス判定処理でかなり楽になる。
+            2. 馬名配列の処理用インデックス配列IをRange(0,61)：0から61までの等差1の数列として生成
+            3. i=処理用インデックス配列I[0]とし，処理用インデックス配列がemptyになるまでloop
+            4.   for j in 処理用インデックス配列I
+            5. 馬名Horse_Name[i]について，"父親の名前"と"母親の名前"を取得。
+            6. 馬名Horse_Name[j]について，同様に父母の名前を取得。
+            7. Horse_Name[i]と[j]について，父同士・母同士の名前を厳密等価確認。
+            　 双方ともにTrue（つまり i と j の父母が同じ）なら，Horse_Name[i]と[j]でクロスと判定
+            　 ※ダビマスでは，全従兄同士のクロスは父同士・母同士のクロスとして扱われる。
+            　 　BTとサンシャインフォーエバーで確認が可能。
+            　　 因名持ち馬は史実馬と「全兄弟扱い」での実装のため，クロス判定に注意が必要。
+            8. Horse_Name[i]と[j]の名前を厳密等価確認。
+            9. 7.がTrueかつ8.がTrueなら，同馬のクロス。
+            　 7.はTrueで8.がFalseなら，全兄弟のクロス。
+            10.Horse_Name[i]と[j]の血統深度を求める。父の３代"前"(父母父とか)なら４，母の２代"前"なら３といった具合で，
+            　 Horse_Name[i]が両親のN代前なら，血統深度はN+1である。
+          　　 血統深度の最小値は，両親自身を表す1。
+          　　 ※ この時，両親の血統を深さ順に並べておくと，父馬の場合ならint(log2(i+1))+1で深度が算出できる。
+          　　　　母ならi=i-62すればおｋ
+          　11.4.のループが１周したら，クロスした馬全てのインデックスを処理用インデックス配列から抜く
+          　　 クロスなしの場合，iをインデックスから削除
+          　12.クロス結果を，「〇〇・△△：M×N」として表記する
+          */
+
+          var overcounter = []
+          if (res[0].length > 0){
+            //インブリードしてる馬を集める
+            overcounter = res[0].map(elm=>{
+              //alert(this.Dam_data.data[elm[1]])
+              if (this.Sire_data.data[elm[0]] < this.Dam_data.data[elm[1]]){
+                return [this.Sire_data.data[elm[0]], this.Dam_data.data[elm[1]]]
+              }else{
+                return [this.Dam_data.data[elm[1]], this.Sire_data.data[elm[0]]]
+              }           
+            }).sort((a,b)=>{
+              if (a > b){return 1}
+              return -1
+            })
+            //alert(overcounter.map(elm=>elm.join('-')))  
+            var name_list = [[overcounter[0][0]]]
+            overcounter.map(elm=>{
+              if(elm[0] === elm[1]){
+                //同名の場合
+                if(!name_list.flat().indexOf(elm[0]) > -1){
+                  //name_listに名前が見当たらない = 未登録 なので新規に追加する
+                  name_list.push([elm[0]])
                 }
-                return false
-              }).join("x")
-              var inbleed_str_dam = this.getAllIndexes(this.Dam_data.data,this.Dam_data.data[elm[1]])
-              .concat(this.getAllIndexes(this.Sire_data.data,this.Dam_data.data[elm[1]]))
-              .map(_elm=>{
-                return (
-                  (_elm >= 31) ? 6 :
-                  (_elm < 31 & _elm >= 15) ? 5 :
-                  (_elm < 15 & _elm >= 7) ? 4 :
-                  (_elm < 7 & _elm >= 3) ? 3 :
-                  (_elm < 3 & _elm >= 1) ? 2 : 1
-                )
-              }).filter((d)=>{
-                if(d < 6){
-                  return true
+              }else{
+                //全兄弟の場合
+                if(name_list.flat().indexOf(elm[0])>-1){
+                  //片方が登録済みで，
+                  if(!(name_list.flat().indexOf(elm[1])>-1)){
+                    //もう片方が未登録の場合，登録済みの方にデータを書き込む
+                    name_list.map((_elm,index)=>{
+                      if(name_list[index].indexOf(elm[0]) > -1){name_list[index].push(elm[1])}
+                    })
+                  }
+                }else{
+                  //片方が未登録で，
+                  if(!(name_list.flat().indexOf(elm[1])>-1)){
+                    //もう片方も未登録の場合，新規にデータを追加
+                    name_list.push([elm[0],elm[1]])
+                  }else{
+                    //もう片方は登録済みの場合，登録済みの方にデータを書き込む
+                    name_list.map((_elm,index)=>{
+                      if(name_list[index].indexOf(elm[1]) > -1){name_list[index].push(elm[0])}
+                    })
+                  }
                 }
-                return false
-              }).join("x")
-              return {"name":this.Sire_data.data[elm[0]].toString() + ", " + this.Dam_data.data[elm[1]].toString() + " " +inbleed_str_sire + 'x' + inbleed_str_dam}
-            }else{
-              var inbleed_indexes = this.getAllIndexes(this.Sire_data.data,this.Sire_data.data[elm[0]]).concat(
-                this.getAllIndexes(this.Dam_data.data,this.Dam_data.data[elm[1]])
-              )
-              var out_str = inbleed_indexes.map(_elm=>{
-                return (
-                  (_elm >= 31) ? 6 :
-                  (_elm < 31 & _elm >= 15) ? 5 :
-                  (_elm < 15 & _elm >= 7) ? 4 :
-                  (_elm < 7 & _elm >= 3) ? 3 :
-                  (_elm < 3 & _elm >= 1) ? 2 : 1
-                )
-              }).filter((d)=>{
-                if(d < 6){
-                  return true
-                }
-                return false
-              }).join("x")
-              return {"name":this.Sire_data.data[elm[0]].toString() + " " + out_str}
               }
-          }))
+            })   
+            //alert(name_list.map(elm=>elm.join('-')))  
+            this.mating_result.inbleed = name_list.map(elm=>{
+              var _str_list = [[],[]]
+              elm.map(_idx=>{
+                var inbleed_str_sire = this.getAllIndexes(this.Sire_data.data,_idx)
+                .concat(this.getAllIndexes(this.Dam_data.data,_idx))
+                .map(_elm=>{
+                  return (
+                    (_elm >= 31) ? 6 :
+                    (_elm < 31 & _elm >= 15) ? 5 :
+                    (_elm < 15 & _elm >= 7) ? 4 :
+                    (_elm < 7 & _elm >= 3) ? 3 :
+                    (_elm < 3 & _elm >= 1) ? 2 : 1
+                  )
+                }).filter((d)=>{
+                  if(d < 6){
+                    return true
+                  }
+                  return false
+                }).flat()
+                _str_list[0].push(_idx)
+                _str_list[1].push(inbleed_str_sire)
+              })
+              return {"name" : _str_list[0].join(',') + " " + _str_list[1].flat().join('x')}
+            })                 
+          }
+
+
+
+
 
           this.mating_result.inbleed = this.mating_result.inbleed.filter((elm,index,self)=>{
             return (self.map(_elm=>_elm.name).indexOf(elm.name) === index)
@@ -1311,6 +1757,7 @@
             var counter_ = attribs.filter(x=>x===elm).length;
             return {"name": this.def_attrib[elm],"num": counter_}
           }).filter(elm=>elm.name!="")
+          //alert(this.mating_result.attrib[2][0])
           
         }
       },
@@ -1330,12 +1777,20 @@
         this.Dam_data={"data":Array(62)},
         this.myDam= [],
         this.attrib_data=[],
-        this.Sire_pdg_attrib= Array(63).fill(["",""]),
-        this.Dam_pdg_attrib= Array(63).fill(["",""]),
-        this.Foal_pdg_attrib= Array(63).fill(["",""]),
+        this.Sire_pdg_attrib= Array(63).fill(["","",""]),
+        this.Dam_pdg_attrib= Array(63).fill(["","",""]),
+        this.Foal_pdg_attrib= Array(63).fill(["","",""]),
+        this.Sire_nitro= Array(10).fill("00"),
+        this.Dam_pdg_attrib= Array(63).fill(["","",""]),
+        this.Dam_nitro= Array(10).fill("00"),
+        this.Foal_pdg_attrib= Array(63).fill(["","",""]),
+        this.Foal_nitro= Array(10).fill("00"),
+
         this.Sire_grp_attrib= Array(9).fill(""),
         this.Dam_grp_attrib= Array(9).fill(""),
         this.Foal_grp_attrib= Array(9).fill(""),
+
+
         this.sire_pedigree_active= false,
         this.dam_pedigree_active= false,
 
@@ -1372,7 +1827,7 @@
           })
         this.dexie_db.PdStore.get("sire_data")
           .then(data=>{
-            if (typeof dict_content === "undefined"){
+            if (typeof data === "undefined"){
               return false
             }
             var append_mySire=data.dict_content;
@@ -1384,11 +1839,25 @@
                   return item;
                 }
               }
-            });
-          });
+            })
+            return true;
+          }).then(tf=>{
+            this.mySire.sort((a,b)=>{
+              if(a.name < b.name) return -1;
+              if(a.name > b.name) return 1;
+              return 0;
+            })
+            this.myDam.sort((a,b)=>{
+              if(a.name < b.name) return -1;
+              if(a.name > b.name) return 1;
+              return 0;
+            })
+            return tf
+          })
+        
         this.dexie_db.PdStore.get("dam_data")
           .then((data)=>{
-            if (typeof dict_content === "undefined"){
+            if (typeof data === "undefined"){
               return false
             }
             var append_myDam=data.dict_content;
@@ -1419,7 +1888,7 @@
 
         this.dexie_db.PdStore.get("attrib_data")
           .then(data=>{
-            if (typeof dict_content === "undefined"){
+            if (typeof data === "undefined"){
               return false
             }
             var append_myAttr=data.dict_content;
@@ -1461,11 +1930,11 @@
 
 <style scoped>
 th,td{
-  border: solid 1px;
+  border: solid;
   padding: 3px;
   padding-left: 10px;
-  font-size: 15px;
-  font-size: clamp(10px, 1vw, 15px);
+  font-size: 12px;
+  font-size: clamp(10px, 1vw, 12px);
   height: 25px;
 }
 table {
@@ -1585,7 +2054,7 @@ table {
   border-collapse: collapse;
 }
 .kishonan{
-  border: solid black;
+  border: solid black ;
   background-color: #FA06FA;
   font-weight: bold;  
   color:white;
@@ -1610,7 +2079,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .Ph{
   background-color: lightsteelblue;
@@ -1618,7 +2087,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .Ns{
   background-color: mediumaquamarine;
@@ -1626,7 +2095,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .Ro{
   background-color: lightpink;
@@ -1634,7 +2103,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .Ne{
   background-color: yellow;
@@ -1642,7 +2111,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .Na{
   background-color: lightskyblue;
@@ -1650,7 +2119,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .Fa{
   background-color: khaki;
@@ -1658,7 +2127,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .To{
   background-color: orange;
@@ -1668,7 +2137,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .Te{
   background-color: purple;
@@ -1678,7 +2147,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .Sw{
   background-color: peachpuff;
@@ -1686,7 +2155,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .Ha{
   background-color: chartreuse;
@@ -1694,7 +2163,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .Hi{
   background-color: mediumblue;
@@ -1704,7 +2173,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .St{
   background-color: slateblue;
@@ -1714,7 +2183,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .Ma{
   background-color: darkorchid;
@@ -1724,7 +2193,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .He{
   background-color: aqua;
@@ -1732,7 +2201,7 @@ table {
   padding: 0px;
   padding-left: 0px;
   font-size: 20px;
-  font-size: clamp(15px, 1vw, 20px);
+  font-size: clamp(15px, 1vw, 15px);
 }
 .UndefinedGr{
   background-color: white;
@@ -1745,13 +2214,13 @@ table {
 .inbleed{
   color: red;
   font-weight: bolder;
-  border: 1px solid black !important;
+  border: solid black !important;
 }
 .outbleed{
   color: black;
   font-weight: normal;
   text-shadow: 0px 0px 0px;
-  
+  border: solid;
 }
 .mating0{
   color: black;
@@ -1900,6 +2369,49 @@ table {
       to right top,
       red,
       red
+      ); 
+}
+.mating7{
+  color: Black;
+  font-weight: bold;
+  background: 
+    -moz-linear-gradient(
+      to right top,
+      #807597,
+      #0D0D2C 13%,
+      #4D5084 22%,
+      #A59CAE 30%,
+      #FFFFFF 40%,
+      #A59CAE 60%,
+      #4D5084 78%,
+      #0D0D2C 87%,
+      #807597
+      ); 
+  background: 
+    -webkit-linear-gradient(
+      to right top,
+      #807597,
+      #0D0D2C 13%,
+      #4D5084 22%,
+      #A59CAE 30%,
+      #FFFFFF 40%,
+      #A59CAE 60%,
+      #4D5084 78%,
+      #0D0D2C 87%,
+      #807597
+      ); 
+  background: 
+    linear-gradient(
+      to right top,
+      #807597,
+      #0D0D2C 13%,
+      #4D5084 22%,
+      #A59CAE 30%,
+      #FFFFFF 40%,
+      #A59CAE 60%,
+      #4D5084 78%,
+      #0D0D2C 87%,
+      #807597
       ); 
 }
 .boundary_bold{
