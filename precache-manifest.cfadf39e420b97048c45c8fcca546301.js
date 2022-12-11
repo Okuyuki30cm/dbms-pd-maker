@@ -36,11 +36,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dbms-pd-maker/js/chunk-vendors.671b88dd.js"
   },
   {
-    "revision": "ec3c6f0f9ae267f6994e949fdf7d5840",
+    "revision": "f015004f68f1f31e0a550cf8f87b7bcf",
     "url": "/dbms-pd-maker/json/attributes.json"
   },
   {
-    "revision": "c860295b7342de3410effba042f4a26b",
+    "revision": "b88157d6243394604a28cafab7483ff1",
     "url": "/dbms-pd-maker/json/default_pedigree.json"
   },
   {
