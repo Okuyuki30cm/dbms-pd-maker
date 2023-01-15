@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dbms-pd-maker/precache-manifest.2ed0b80912da741938d1afa963cec703.js"
+  "/dbms-pd-maker/precache-manifest.2b91daeb1b07d47ec5ed6b34d95d91d7.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "dbms-pd-maker"});
